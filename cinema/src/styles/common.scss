@@ -1,0 +1,42 @@
+@import "variables.scss";
+
+.search-form {
+  max-width: 768px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .input {
+    margin-right: 16px;
+    flex-basis: 70%;
+  }
+}
+
+.button {
+  border-radius: $size-h;
+  border: 0;
+  padding: 0 64px;
+  height: $form-control-h;
+  min-width: 200px;
+  text-transform: uppercase;
+
+  &__primary {
+    color: $white;
+    background-color: $red;
+  }
+}
+
+.input {
+  background-color: $dark-gray;
+  border-radius: $size-h;
+  border: 0;
+  opacity: 0.7;
+  padding: 0 20px;
+  height: $form-control-h;
+  text-overflow: ellipsis;
+
+  &::placeholder {
+    color: $white;
+  }
+}

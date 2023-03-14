@@ -1,5 +1,7 @@
-import './App.css';
+import './App.scss';
+
 import Counter from "./components/counter";
+import SearchForm from "./components/search-form";
 
 function App() {
     let initialCounterValue = 1;
@@ -7,6 +9,7 @@ function App() {
     return (
         <div>
             <Counter value={initialCounterValue}></Counter>
+            <SearchForm></SearchForm>
         </div>
     )
 }
