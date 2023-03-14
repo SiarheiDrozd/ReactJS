@@ -1,0 +1,32 @@
+@import "../../styles/variables";
+
+.genre-select-list {
+  width: 100%;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  background-color: $black;
+  list-style: none;
+  padding: 0;
+  height: $form-control-h;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+
+  &__item {
+    height: 100%;
+    box-sizing: border-box;
+    color: $white;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: $size-1;
+    }
+
+    &.selected {
+      border-bottom: $red 4px solid;
+    }
+  }
+}

@@ -3,10 +3,9 @@ import './search-form.scss';
 
 export default {
   title: 'Components/SearchForm',
-  component: SearchFrom,
+  component: SearchFrom
 };
 
 const Template = (args) => <SearchFrom {...args} />;
 
 export const SearchForm = Template.bind({});
-

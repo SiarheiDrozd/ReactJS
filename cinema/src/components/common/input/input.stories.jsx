@@ -1,13 +1,13 @@
-import Input from "./input";
+import Input from './input';
 
 export default {
-    title: 'Components/Input',
-    component: Input
-}
+  title: 'Components/Input',
+  component: Input
+};
 
-const Template = (args) => <Input {...args}/>;
+const Template = (args) => <Input {...args} />;
 
 export const input = Template.bind({});
 input.args = {
-    placeholder: 'placeholder text'
-}
+  placeholder: 'placeholder text'
+};
