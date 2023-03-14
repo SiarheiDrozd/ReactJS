@@ -1,16 +1,16 @@
 import './App.scss';
 
-import Counter from "./components/counter";
-import SearchForm from "./components/search-form";
+import Counter from "./components/counter/counter";
+import SearchForm from "./components/search-form/search-form";
 
 function App() {
     let initialCounterValue = 1;
 
     return (
-        <div>
+        <main>
             <Counter value={initialCounterValue}></Counter>
             <SearchForm></SearchForm>
-        </div>
+        </main>
     )
 }
 

@@ -1,0 +1,14 @@
+@import "../../styles/variables";
+
+.search-form {
+  max-width: 768px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .input {
+    margin-right: 16px;
+    flex-basis: 70%;
+  }
+}
