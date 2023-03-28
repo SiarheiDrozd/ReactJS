@@ -25,7 +25,7 @@ function App() {
       </header>
       <main className={'main'}>
         <div className={'container'}>
-          <GenreSelect list={genreList} onSelect={onGenreSelect} />
+          <GenreSelect list={genreList} onSelect={onGenreSelect} default={genreList[2]} />
           <br />
           <br />
           <br />

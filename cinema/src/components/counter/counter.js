@@ -1,5 +1,6 @@
 import React from 'react';
 import './counter.scss';
+import PropTypes from 'prop-types';
 
 class Counter extends React.Component {
   constructor(props) {
@@ -26,5 +27,9 @@ class Counter extends React.Component {
     );
   }
 }
+
+Counter.propTypes = {
+  value: PropTypes.number
+};
 
 export default Counter;

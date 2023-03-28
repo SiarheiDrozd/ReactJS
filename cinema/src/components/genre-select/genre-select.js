@@ -6,7 +6,7 @@ export default class GenreSelect extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selection: this.props.list[0],
+      selected: this.props.default || this.props.list[0],
       list: this.props.list
     };
 
@@ -38,6 +38,7 @@ export default class GenreSelect extends React.Component {
 }
 
 GenreSelect.propTypes = {
+  default: PropTypes.string,
   list: PropTypes.arrayOf(PropTypes.string),
   onSelect: PropTypes.func
 };

@@ -18,11 +18,19 @@ describe('Counter component', () => {
   test('should increase value', () => {
     const element = render(<Counter value={0} />);
     const incButton = element.getByTestId('inc');
-
-    fireEvent(incButton, new MouseEvent('click'));
-
     const counterValueElement = element.getByTestId('counter');
+
+    fireEvent.click(incButton);
+
     expect(counterValueElement).toHaveTextContent('1');
   });
-  test('should decrease value', () => {});
+  test('should decrease value', () => {
+    const element = render(<Counter value={0} />);
+    const incButton = element.getByTestId('dec');
+    const counterValueElement = element.getByTestId('counter');
+
+    fireEvent.click(incButton);
+
+    expect(counterValueElement).toHaveTextContent('-1');
+  });
 });
