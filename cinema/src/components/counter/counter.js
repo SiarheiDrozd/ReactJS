@@ -5,7 +5,7 @@ class Counter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      counter: this.props.value
+      counter: this.props.value || 0
     };
   }
 
@@ -21,7 +21,7 @@ class Counter extends React.Component {
       'div',
       { id: 'id', className: 'counter' },
       React.createElement('button', { id: 'dec', onClick: this.decrement }, '-'),
-      React.createElement('span', { className: 'number' }, this.state.counter),
+      React.createElement('span', { className: 'number', id: 'counter' }, this.state.counter),
       React.createElement('button', { id: 'inc', onClick: this.increment }, '+')
     );
   }
