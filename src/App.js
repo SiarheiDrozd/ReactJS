@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+
+import Counter from './components/counter/counter';
+import SearchForm from './components/search-form/search-form';
+import GenreSelect from './components/genre-select/genre-select';
 
 function App() {
+  const initialCounterValue = 1;
+  const genreList = ['all', 'Documentary', 'Comedy', 'Horror', 'Crime'];
+
+  function onGenreSelect(genre) {
+    console.log('app', genre);
+  }
+
+  function onSearch(searchQuery) {
+    console.log('app', searchQuery);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header className={'header'}>
+        <div className={'container'}>
+          <SearchForm onSearch={onSearch} />
+        </div>
       </header>
+      <main className={'main'}>
+        <div className={'container'}>
+          <GenreSelect list={genreList} onSelect={onGenreSelect} />
+          <br />
+          <br />
+          <br />
+          <Counter value={initialCounterValue} />
+        </div>
+      </main>
     </div>
   );
 }
