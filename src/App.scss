@@ -33,6 +33,14 @@
   grid-template-columns: repeat(3, 1fr);
 }
 
+.filter {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 90px;
+}
+
 .filter-results {
   color: $white;
   border-top: 2px solid $gray;

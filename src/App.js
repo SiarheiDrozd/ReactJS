@@ -6,6 +6,7 @@ import GenreSelect from './components/genre-select/genre-select';
 import MovieTile from './components/movie-tile/movie-tile';
 import { useState } from 'react';
 import MovieDetails from './components/movie-details/movie-details';
+import SortControl from './components/sort-control/sort-control';
 
 function App() {
   const initialCounterValue = 1;
@@ -24,6 +25,7 @@ function App() {
     }
   ];
   const contextMenu = ['edit', 'delete'];
+  const sortBy = ['Release Date', 'Title'];
   const [movieDetails, setMovieDetails] = useState(undefined);
 
   function onGenreSelect(genre) {
@@ -41,6 +43,9 @@ function App() {
   function onMovieTileClick(movie) {
     setMovieDetails(movie);
   }
+  function onSortBy(event) {
+    console.log(event.target.value);
+  }
 
   return (
     <div>
@@ -55,7 +60,10 @@ function App() {
       )}
       <main className={'main'}>
         <div className={'container'}>
-          <GenreSelect list={genreList} onSelect={onGenreSelect} default={genreList[2]} />
+          <div className={'filter'}>
+            <GenreSelect list={genreList} onSelect={onGenreSelect} default={genreList[2]} />
+            <SortControl options={sortBy} onChange={onSortBy}></SortControl>
+          </div>
           <p className={'filter-results'}>
             <b>39</b> movies found
           </p>

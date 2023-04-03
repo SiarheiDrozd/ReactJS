@@ -13,7 +13,7 @@ const ContextMenu = (props) => {
       </button>
       {visible && (
         <ul className={'context-menu__list'}>
-          <li style={{ 'text-align': 'end' }}>
+          <li>
             <button className={'context-menu__close-button'} onClick={() => setVisible(false)}>
               X
             </button>
