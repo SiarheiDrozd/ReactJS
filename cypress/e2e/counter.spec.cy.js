@@ -1,7 +1,7 @@
 describe('Counter spec', () => {
   beforeEach(() => {
     cy.visit('/');
-  })
+  });
   it('should render', () => {
     cy.get('#counter').should('contain', '1');
   });
@@ -16,6 +16,6 @@ describe('Counter spec', () => {
       .eq(1)
       .should('not.to.have.class', 'selected')
       .click()
-      .should('have.class', 'selected')
+      .should('have.class', 'selected');
   });
-})
+});

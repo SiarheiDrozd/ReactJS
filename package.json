@@ -19,11 +19,11 @@
     "test": "jest",
     "test-rs": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 6006 -s public",
+    "storybook": "start-storybook -p 6006 public",
     "build-storybook": "build-storybook -s public",
     "lint": "eslint cinema",
     "lint:fix": "eslint --fix",
-    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config .prettierrc",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config .prettierrc.json",
     "cypress:open": "npm run start && cypress open"
   },
   "eslintConfig": {

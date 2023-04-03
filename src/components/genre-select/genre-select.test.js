@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
 import GenreSelect from './genre-select';
 import { configure } from '@testing-library/react';
-import { userEvent } from "@storybook/testing-library";
+import { userEvent } from '@storybook/testing-library';
 
 configure({ testIdAttribute: 'id' });
 describe('Genre-select component', () => {
@@ -12,13 +12,13 @@ describe('Genre-select component', () => {
     const items = element.getAllByRole('listitem');
     items.map((item, index) => {
       expect(item).toHaveTextContent(index + 1);
-    })
+    });
   });
 
   test('should highlights a selected genre passed in props', () => {
     const onChange = jest.fn();
     const list = ['1', '2', '3'];
-    const element = render(<GenreSelect list={list} default={'3'} onSelect={onChange}/>);
+    const element = render(<GenreSelect list={list} default={'3'} onSelect={onChange} />);
     const items = element.getAllByRole('listitem');
 
     expect(items[2]).toHaveClass('selected');
@@ -27,7 +27,7 @@ describe('Genre-select component', () => {
   test('should highlights a selected genre passed in props', () => {
     const onChange = jest.fn();
     const list = ['1', '2', '3'];
-    const element = render(<GenreSelect list={list} onSelect={onChange}/>);
+    const element = render(<GenreSelect list={list} onSelect={onChange} />);
     const items = element.getAllByRole('listitem');
 
     fireEvent.click(items[1]);
