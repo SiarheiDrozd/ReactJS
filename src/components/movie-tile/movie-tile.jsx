@@ -7,7 +7,7 @@ const MovieTile = (props) => {
   const { imgUrl, imgAlt, title, year, genreList } = props.movie;
 
   return (
-    <article className={'movie-tile'}>
+    <article className={'movie-tile'} onClick={() => props.onMovieTileClick(props.movie)}>
       <ContextMenu
         menu={props.contextMenu}
         onClick={(action) => props.onContextMenuClick(action, props.movie)}
@@ -31,7 +31,8 @@ MovieTile.propTypes = {
     genreList: PropTypes.arrayOf(PropTypes.string)
   }),
   contextMenu: PropTypes.arrayOf(PropTypes.string),
-  onContextMenuClick: PropTypes.func
+  onContextMenuClick: PropTypes.func,
+  onMovieTileClick: PropTypes.func
 };
 
 export default MovieTile;

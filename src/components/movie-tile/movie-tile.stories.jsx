@@ -1,6 +1,5 @@
 import MovieTile from './movie-tile';
 import './movie-tile.scss';
-import image from '../../assets/images/bohemian-rhapsody.png';
 
 export default {
   title: 'Components/MovieTile',
@@ -16,7 +15,7 @@ const Template = (args) => (
 export const movieTile = Template.bind({});
 movieTile.args = {
   movie: {
-    imgUrl: image.src,
+    imgUrl: 'https://upload.wikimedia.org/wikipedia/en/6/6c/Bohemian_Rhapsody_soundtrack.jpg',
     imgAlt: 'Bohemian Rhapsody',
     title: 'Bohemian Rhapsody',
     year: '2003',
