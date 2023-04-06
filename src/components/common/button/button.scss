@@ -7,6 +7,15 @@
   height: $form-control-h;
   min-width: 200px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 3px 0 $white;
+  }
+
+  &:active {
+    background-color: darken($red, 2%);
+  }
 
   &__primary {
     color: $white;

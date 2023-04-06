@@ -7,6 +7,8 @@ import MovieTile from './components/movie-tile/movie-tile';
 import { useState } from 'react';
 import MovieDetails from './components/movie-details/movie-details';
 import SortControl from './components/sort-control/sort-control';
+import Dialog from './components/dialog/dialog';
+import DeleteMovie from './components/forms/delete-movie/delete-movie';
 
 function App() {
   const initialCounterValue = 1;
@@ -27,6 +29,7 @@ function App() {
   const contextMenu = ['edit', 'delete'];
   const sortBy = ['Release Date', 'Title'];
   const [movieDetails, setMovieDetails] = useState(undefined);
+  const [dialogVisible, setDialogVisible] = useState(true);
 
   function onGenreSelect(genre) {
     console.log('app', genre);
@@ -47,8 +50,16 @@ function App() {
     console.log(event.target.value);
   }
 
+  function onModalClose() {
+    console.log(dialogVisible);
+    setDialogVisible(false);
+  }
+
+  function onMovieDelete() {}
+
   return (
     <div>
+      <div id="modal-root"></div>
       {movieDetails ? (
         <MovieDetails movie={movieDetails}></MovieDetails>
       ) : (
@@ -68,6 +79,9 @@ function App() {
             <b>39</b> movies found
           </p>
           <div className={'movies-list'}>
+            <Dialog isVisible={dialogVisible} onClose={onModalClose} header={'delete movie'}>
+              <DeleteMovie onDelete={onMovieDelete}></DeleteMovie>
+            </Dialog>
             {movieList.map((item) => (
               <MovieTile
                 key={item.title}
