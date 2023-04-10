@@ -28,8 +28,8 @@ export default class SearchForm extends React.Component {
     return (
       <form onSubmit={this.handleFormSubmit} name={'searchForm'} className={'search-form'}>
         <Input
+          label={'label'}
           value={this.state.searchQuery}
-          className={'input'}
           onChange={this.handleInputChange}
           placeholder={'What do you want to watch?'}
         />

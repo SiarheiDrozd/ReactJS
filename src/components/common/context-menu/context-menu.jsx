@@ -6,13 +6,20 @@ const ContextMenu = (props) => {
 
   return (
     <React.Fragment>
-      <button type={'button'} className={'context-menu__button'} onClick={() => setVisible(true)}>
+      <button
+        type={'button'}
+        className={'context-menu__button'}
+        onClick={(e) => {
+          e.stopPropagation();
+          return setVisible(true);
+        }}
+      >
         <div className={'dot'}></div>
         <div className={'dot'}></div>
         <div className={'dot'}></div>
       </button>
       {visible && (
-        <ul className={'context-menu__list'}>
+        <ul className={'context-menu__list'} onClick={(event) => event.stopPropagation()}>
           <li>
             <button className={'context-menu__close-button'} onClick={() => setVisible(false)}>
               X

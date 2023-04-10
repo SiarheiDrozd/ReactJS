@@ -44,7 +44,7 @@
 
     & > li:first-child {
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
     }
     & > li:not(:first-child) {
       padding: 4px 20px;

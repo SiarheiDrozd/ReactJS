@@ -9,6 +9,13 @@
   text-transform: uppercase;
   cursor: pointer;
 
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+
+
   &:hover {
     box-shadow: 0 0 3px 0 $white;
   }
@@ -20,5 +27,16 @@
   &__primary {
     color: $white;
     background-color: $red;
+  }
+
+  &__secondary {
+    color: $red;
+    background-color: transparent;
+    border: 2px solid $red;
+
+
+    &:active {
+      background-color: rgba($gray, 0.9);
+    }
   }
 }
