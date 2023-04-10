@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.sort-control {
+  color: $light-gray;
+  text-transform: uppercase;
+  display: flex;
+  white-space: nowrap;
+  font-weight: 400;
+
+  &__item {
+    color: $white;
+  }
+
+  &__select {
+    margin-left: 30px;
+    background: none;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
