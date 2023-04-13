@@ -6,7 +6,7 @@ function SortControl(props) {
   return (
     <label className={'sort-control'}>
       Sort by
-      <select className={'sort-control__select'} onChange={props.onChange}>
+      <select className={'sort-control__select'} onChange={(e) => props.onChange(e.target.value)}>
         {props.options.map((option) => (
           <option key={option} className={'sort-control__item'} value={option}>
             {option}

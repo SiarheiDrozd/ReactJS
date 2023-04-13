@@ -9,8 +9,6 @@ export default class GenreSelect extends React.Component {
       selected: this.props.default || this.props.list[0],
       list: this.props.list
     };
-
-    this.select = this.select.bind(this);
   }
 
   select(item) {

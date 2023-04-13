@@ -6,6 +6,17 @@
   display: flex;
   column-gap: 60px;
 
+  &__close-button {
+    background: url("../../assets/images/search-button.svg");
+    width: 29px;
+    height: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    top: 35px;
+    border: none;
+  }
+
   &__image {
     width: 323px;
     height: 468px;
@@ -22,6 +33,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
 
     color: $white;
     font-size: 20px;

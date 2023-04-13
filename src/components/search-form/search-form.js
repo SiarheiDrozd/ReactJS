@@ -11,9 +11,6 @@ export default class SearchForm extends React.Component {
     this.state = {
       searchQuery: this.props.initialQuery
     };
-
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleFormSubmit = this.handleFormSubmit.bind(this);
   }
 
   handleInputChange(event) {
@@ -26,11 +23,14 @@ export default class SearchForm extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleFormSubmit} name={'searchForm'} className={'search-form'}>
+      <form
+        onSubmit={(event) => this.handleFormSubmit(event)}
+        name={'searchForm'}
+        className={'search-form'}
+      >
         <Input
-          label={'label'}
           value={this.state.searchQuery}
-          onChange={this.handleInputChange}
+          onChange={(event) => this.handleInputChange(event)}
           placeholder={'What do you want to watch?'}
         />
         <Button

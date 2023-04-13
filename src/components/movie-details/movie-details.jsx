@@ -3,21 +3,30 @@ import './movie-details.scss';
 import PropTypes from 'prop-types';
 
 const MovieDetails = (props) => {
-  const { imgUrl, imgAlt, rate, title, description, year, duration, genreList } = props.movie;
+  const { poster_path, vote_average, title, overview, release_date, runtime, genres } = props.movie;
   return (
     <article className={'movie-details'}>
-      <img src={imgUrl} alt={imgAlt} className={'movie-details__image'} />
+      <button onClick={props.onClose} className={'movie-details__close-button'}></button>
+      <img
+        src={'https://picsum.photos/200/300'}
+        alt={poster_path}
+        className={'movie-details__image'}
+      />
       <div>
         <h2 className={'movie-details__title'}>
           {title}
-          <span className={'movie-details__rate'}>{rate}</span>
+          <span className={'movie-details__rate'}>{vote_average}</span>
         </h2>
-        <p className={'movie-details__genre-list'}>{genreList.join(', ')}</p>
+        <p className={'movie-details__genre-list'}>{genres.join(', ')}</p>
         <p className={'movie-details__time'}>
-          <span>{year}</span>
-          <span>{duration}</span>
+          <span>
+            {new Intl.DateTimeFormat('en-US', { year: 'numeric' }).format(new Date(release_date))}
+          </span>
+          <span>
+            {Math.floor(runtime / 60)}h {runtime % 60}min
+          </span>
         </p>
-        <p className={'movie-details__description'}>{description}</p>
+        <p className={'movie-details__description'}>{overview}</p>
       </div>
     </article>
   );
@@ -25,15 +34,15 @@ const MovieDetails = (props) => {
 
 MovieDetails.propTypes = {
   movie: PropTypes.shape({
-    imgUrl: PropTypes.string,
-    imgAlt: PropTypes.string,
-    rate: PropTypes.string,
+    poster_path: PropTypes.string,
+    vote_average: PropTypes.number,
     title: PropTypes.string,
-    year: PropTypes.string,
-    genreList: PropTypes.arrayOf(PropTypes.string),
-    duration: PropTypes.string,
-    description: PropTypes.string
-  })
+    release_date: PropTypes.string,
+    genres: PropTypes.arrayOf(PropTypes.string),
+    runtime: PropTypes.number,
+    overview: PropTypes.string
+  }),
+  onClose: PropTypes.func
 };
 
 export default MovieDetails;
