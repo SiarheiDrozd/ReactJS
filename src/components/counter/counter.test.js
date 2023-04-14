@@ -1,6 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
 import Counter from './counter';
 import { configure } from '@testing-library/react';
+import '@testing-library/jest-dom';
 
 configure({ testIdAttribute: 'id' });
 describe('Counter component', () => {

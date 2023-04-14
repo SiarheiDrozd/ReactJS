@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search-form component should render initial value 1`] = `
+<form
+  className="search-form"
+  name="searchForm"
+  onSubmit={[Function]}
+>
+  <div
+    className="input"
+  >
+    <input
+      className="input__input"
+      id="9e1e0721-a14d-4346-f488-3185ab8b5555"
+      onChange={[Function]}
+      placeholder="What do you want to watch?"
+      type="text"
+      value="dummy text"
+    />
+  </div>
+  <button
+    className="button button__primary"
+    type="submit"
+  >
+    Search
+  </button>
+</form>
+`;

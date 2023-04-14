@@ -1,7 +1,7 @@
 import { fireEvent, render } from '@testing-library/react';
 import GenreSelect from './genre-select';
 import { configure } from '@testing-library/react';
-import { userEvent } from '@storybook/testing-library';
+import '@testing-library/jest-dom';
 
 configure({ testIdAttribute: 'id' });
 describe('Genre-select component', () => {
