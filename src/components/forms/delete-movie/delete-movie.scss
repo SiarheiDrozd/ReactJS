@@ -1,0 +1,10 @@
+.delete-movie {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  &__description {
+    align-self: start;
+    margin-bottom: 52px;
+  }
+}

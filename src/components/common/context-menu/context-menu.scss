@@ -1,0 +1,59 @@
+.context-menu {
+  position: relative;
+
+  &__button {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: #2A202D;
+    justify-content: space-around;
+    align-items: center;
+
+    .dot {
+      background-color: #fff;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+    }
+  }
+
+  &__close-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 18px;
+  }
+
+  &__list {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: #232323;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 8px 0;
+    width: 100px;
+    text-transform: capitalize;
+
+    & > li:first-child {
+      display: flex;
+      justify-content: flex-end;
+    }
+    & > li:not(:first-child) {
+      padding: 4px 20px;
+
+      &:hover {
+        background-color: #f65261;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "../../styles/variables";
+@import "../../assets/font/montserrat.css";
+
+.container {
+  width: 100%;
+  max-width: 768px;
+  align-self: center;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  background-image: url("../../assets/images/header-background.png");
+  background-size: cover;
+  background-position: center;
+  height: 396px;
+}
+
+.add-movie-button {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: #606060AD;
+  border: none;
+  padding: 12px 18px;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: right;
+  color: $red;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 64px 0;
+  margin-top: 16px;
+  background-color: $black;
+}
+
+.movies-list {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 15px;
+  column-gap: 15px;
+}
+
+.filter {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 90px;
+}
+
+.filter-results {
+  color: $white;
+  border-top: 2px solid $gray;
+  padding: 26px 0;
+  margin: 0;
+}

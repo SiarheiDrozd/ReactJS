@@ -1,0 +1,28 @@
+.form-movie {
+  margin-top: 60px;
+  min-width: 70vw;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 15px;
+
+    & :first-child {
+      flex: 60%;
+    }
+
+    & :last-child {
+      flex: 40%;
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: end;
+      column-gap: 15px;
+    }
+  }
+}
