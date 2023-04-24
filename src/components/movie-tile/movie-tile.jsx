@@ -9,7 +9,7 @@ const MovieTile = (props) => {
 
   return (
     <article className={'movie-tile'} onClick={() => props.onMovieTileClick(props.movie)}>
-      <Link to={`/${props.movie.id}`} className={'movie-tile__link'}>
+      <Link to={`/${props.movie.id}${location.search}`} className={'movie-tile__link'}>
         <ContextMenu
           menu={props.contextMenu}
           onClick={(action) => props.onContextMenuClick(action, props.movie)}
