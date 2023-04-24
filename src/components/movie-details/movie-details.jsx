@@ -1,12 +1,13 @@
 import React from 'react';
 import './movie-details.scss';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const MovieDetails = (props) => {
   const { poster_path, vote_average, title, overview, release_date, runtime, genres } = props.movie;
   return (
     <article className={'movie-details'}>
-      <button onClick={props.onClose} className={'movie-details__close-button'}></button>
+      <Link to={'/'} onClick={props.onClose} className={'movie-details__close-button'}></Link>
       <img
         src={'https://picsum.photos/200/300'}
         alt={poster_path}

@@ -10,7 +10,7 @@ const Dialog = (props) => {
 
   useEffect(() => {
     setIsVisible(props.isVisible);
-  });
+  }, [props.isVisible]);
 
   return createPortal(
     <>

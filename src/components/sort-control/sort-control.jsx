@@ -6,7 +6,11 @@ function SortControl(props) {
   return (
     <label className={'sort-control'}>
       Sort by
-      <select className={'sort-control__select'} onChange={(e) => props.onChange(e.target.value)}>
+      <select
+        className={'sort-control__select'}
+        onChange={(e) => props.onChange(e.target.value)}
+        defaultValue={props.default}
+      >
         {props.options.map((option) => (
           <option key={option} className={'sort-control__item'} value={option}>
             {option}
@@ -19,7 +23,8 @@ function SortControl(props) {
 
 SortControl.propTypes = {
   options: PropTypes.arrayOf(PropTypes.string),
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  default: PropTypes.string
 };
 
 export default SortControl;
