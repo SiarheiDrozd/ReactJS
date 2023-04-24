@@ -1,0 +1,62 @@
+@import "/src/styles/variables";
+
+.movie-details {
+  background-color: $black;
+  padding: 60px;
+  display: flex;
+  column-gap: 60px;
+
+  &__close-button {
+    background: url("../../assets/images/search-button.svg");
+    width: 29px;
+    height: 28px;
+    cursor: pointer;
+    position: absolute;
+    right: 60px;
+    top: 35px;
+    border: none;
+  }
+
+  &__image {
+    width: 323px;
+    height: 468px;
+  }
+  &__title {
+    font-size: 40px;
+    color: $white;
+    display: flex;
+    align-items: center;
+    column-gap: 60px;
+    margin: 0;
+  }
+  &__rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    color: $white;
+    font-size: 20px;
+    font-weight: 300;
+    width: 60px;
+    height: 60px;
+    border: 1px solid $white;
+    border-radius: 50%;
+  }
+  &__genre-list {
+    color: $gray;
+    font-size: 14px;
+  }
+  &__time {
+    color: $red;
+    font-size: 24px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__description {
+    color: $gray;
+    font-size: 20px;
+    font-weight: 300;
+  }
+}
