@@ -1,0 +1,47 @@
+@import "/src/styles/variables";
+
+.movie-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: $light-gray;
+
+  &__image {
+    height: 360px;
+    width: 100%;
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    margin: 0;
+  }
+
+  &__year {
+    font-size: 14px;
+    font-weight: 200;
+    border-radius: 4px;
+    padding: 4px 8px;
+    border: 1px solid #555555;
+    color: $white;
+  }
+
+  &__genre-list {
+    list-style: none;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin: 0;
+  }
+
+  &__context-menu {}
+}
